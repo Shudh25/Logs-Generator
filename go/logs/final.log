@@ -13,8 +13,14 @@ basic-tidb-0                      2/2     Running   0               126m
 basic-tidb-dashboard-0            1/1     Running   0               129m
 basic-tikv-0                      1/1     Running   0               128m
 
-REMOVE 1 LINE
 3. Warnings and Errors (Past 24h)
-#TiDB WARN= 0 ERROR= 0
-#Tikv WARN= 9 ERROR= 0
-#PD   WARN= 29 ERROR= 0
+#TiDB
+WARN= 0
+ERROR= 0
+#Tikv
+WARN= 9
+ERROR= 0
+#PD
+WARN= 29
+ERROR= 0
+

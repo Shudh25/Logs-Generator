@@ -1,0 +1,28 @@
+.processTitile{
+    border: 2px solid red;
+}
+.logsContainer{
+    display: flex;
+}
+.logsCard{
+    border: 2px solid blue;
+}
+
+.card0{
+    width: 20rem;
+    /* border: 2px solid white; */
+    border: 2px solid white;
+    height: 9rem;
+}
+
+p {
+    font-family: Arial, sans-serif,monospace;
+    font-size: 20px;
+}
+.cardStyle{
+    background-color: #f0d7da;
+    width: 20rem;
+    border: 2px solid white;
+    height: 9rem;
+    border-radius: 0 15px 15px 15px;
+}

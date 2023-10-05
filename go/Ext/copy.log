@@ -15,8 +15,7 @@ basic-tikv-0                      1/1     Running   0               128m
 
 REMOVE 1 LINE
 3. Warnings and Errors (Past 24h)
-#TiDB logs
-Defaulted container "slowlog" out of: slowlog, tidb
+#TiDB
 WARN= 0
 ERROR= 0
 #Tikv

@@ -6,6 +6,7 @@ import (
 	"log"
 	"os"
 	"strings"
+	"time"
 
 	"github.com/signintech/gopdf"
 )
@@ -19,7 +20,7 @@ func main() {
 	err := pdf.AddTTFFont("wts11", "wts11.ttf")
 	errorFind(err)
 
-	err = pdf.SetFont("wts11", "", 14)
+	err = pdf.SetFont("wts11", "", 11)
 	errorFind(err)
 
 	pdf.SetXY(180, 15) //move current location
@@ -33,7 +34,7 @@ func main() {
 	errorFind(err)
 
 	//READ FILE CODE
-	filePath := "final.log"
+	filePath := "logs/final.log"
 	file, err := os.Open(filePath)
 	if err != nil {
 		fmt.Println("Error opening file:", err)
@@ -69,17 +70,17 @@ func main() {
 		// fmt.Println(variable)
 	}
 
-	type warnErrors struct {
-		PD   string
-		TiDB string
-		TIKV string
-	}
+	// type warnErrors struct {
+	// 	PD   string
+	// 	TiDB string
+	// 	TIKV string
+	// }
 
-	var arr []warnErrors
-	a := warnErrors{"20", "20", "20"}
-	arr = append(arr, a)
+	// var arr []warnErrors
+	// a := warnErrors{"20", "20", "20"}
+	// arr = append(arr, a)
 
-	fmt.Print(arr)
+	// fmt.Print(arr)
 
 	if err := scanner.Err(); err != nil {
 		fmt.Println("Error scanning file:", err)
@@ -87,8 +88,24 @@ func main() {
 
 	//end read file
 
+	// Get the current date and time
+	currentTime := time.Now()
+
+	// Extract the current date
+	currentYear := currentTime.Year()
+	currentMonth := currentTime.Month()
+	currentDay := currentTime.Day()
+
+	// Print the current date
+	pdfStr := fmt.Sprintf("report-%d-%02d-%02d.pdf", currentYear, currentMonth, currentDay)
+
+	path := "../reporting-dashboard/public/pdfs/"
+	pathWithName := path + pdfStr
+
+	// fmt.Print(pathWithName)
+
 	//Exporting PDF
-	pdf.WritePdf("report.pdf")
+	pdf.WritePdf(pathWithName)
 
 }
 
