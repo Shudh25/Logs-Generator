@@ -1,0 +1,27 @@
+Report Date:
+Thu Oct  5 04:27:53 IST 2023
+
+TiDB -Latest Status
+1. Chaos Action
+  pod-failure for Tikv
+2. Cluster Status
+NAME                              READY   STATUS    RESTARTS        AGE
+basic-discovery-b6549df5d-xmhjc   1/1     Running   1 (4h54m ago)   6h15m
+basic-monitor-0                   4/4     Running   4 (4h54m ago)   6h14m
+basic-pd-0                        1/1     Running   0               129m
+basic-tidb-0                      2/2     Running   0               126m
+basic-tidb-dashboard-0            1/1     Running   0               129m
+basic-tikv-0                      1/1     Running   0               128m
+
+REMOVE 1 LINE
+3. Warnings and Errors (Past 24h)
+#TiDB logs
+Defaulted container "slowlog" out of: slowlog, tidb
+WARN= 0
+ERROR= 0
+#Tikv
+WARN= 9
+ERROR= 0
+#PD
+WARN= 29
+ERROR= 0
