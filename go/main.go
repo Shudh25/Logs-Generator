@@ -99,7 +99,7 @@ func main() {
 	// Print the current date
 	pdfStr := fmt.Sprintf("report-%d-%02d-%02d.pdf", currentYear, currentMonth, currentDay)
 
-	path := "../reporting-dashboard/public/pdfs/"
+	path := "../static/pdfs/"
 	pathWithName := path + pdfStr
 
 	// fmt.Print(pathWithName)
