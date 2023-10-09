@@ -95,9 +95,12 @@ func main() {
 	currentYear := currentTime.Year()
 	currentMonth := currentTime.Month()
 	currentDay := currentTime.Day()
+	currentHour := currentTime.Hour()
 
 	// Print the current date
-	pdfStr := fmt.Sprintf("report-%d-%02d-%02d.pdf", currentYear, currentMonth, currentDay)
+	// pdfStr := fmt.Sprintf("report-%d-%02d-%02d.pdf", currentYear, currentMonth, currentDay)
+	// For date with hours
+	pdfStr := fmt.Sprintf("report-%d-%02d-%02d-%02d.pdf", currentYear, currentMonth, currentDay, currentHour)
 
 	path := "../static/pdfs/"
 	pathWithName := path + pdfStr
